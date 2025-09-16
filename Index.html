@@ -6,65 +6,102 @@
   <title>TitanPs GTPS</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff0000, #00ff00, #0000ff);
-      background-size: 600% 600%;
-      animation: gradientMove 15s ease infinite;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
       margin: 0;
       padding: 0;
-      color: white;
+      color: #f0f0f0;
       text-align: center;
     }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+
     header {
-      padding: 40px 20px;
+      padding: 40px 20px 20px;
     }
+
+    /* RGB Gradient Text */
     header h1 {
       font-size: 3em;
       margin: 0;
-      text-shadow: 2px 2px 5px black;
-    }
-    p.description {
-      font-size: 1.2em;
-      margin: 10px auto 30px;
-      max-width: 600px;
-    }
-    .card {
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
-    .status {
+      background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: bold;
-      color: #00ff00;
-      font-size: 1.5em;
+      animation: rgbMove 6s linear infinite;
+      background-size: 400% 100%;
     }
-    a {
-      color: #00ffff;
+
+    @keyframes rgbMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .description {
+      font-size: 1.1em;
+      margin: 20px auto 40px;
+      max-width: 750px;
+      line-height: 1.6em;
+      color: #bbb;
+      background: rgba(20,20,20,0.8);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,255,255,0.3);
+    }
+
+    /* Neon Section Titles */
+    .section-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #4dd2ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Neon Glow Buttons */
+    .btn {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 20px;
+      border-radius: 12px;
       text-decoration: none;
+      font-size: 1.1em;
       font-weight: bold;
+      color: white;
+      max-width: 320px;
+      background: rgba(20,20,20,0.95);
+      border: 2px solid transparent;
+      background-image: linear-gradient(#1a1a1a, #1a1a1a), 
+        linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, violet);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+      transition: all 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,255,255,0.6);
     }
+
     pre {
-      background: rgba(0,0,0,0.7);
-      padding: 10px;
+      background: #111;
+      padding: 15px;
       border-radius: 10px;
       text-align: left;
       overflow-x: auto;
+      font-size: 1em;
+      color: #00ffcc;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0,255,200,0.3);
+      border: 1px solid rgba(0,255,200,0.2);
     }
+
     footer {
-      margin: 40px 0 20px;
+      margin: 50px 0 25px;
       font-size: 0.9em;
-      color: #ddd;
+      color: #777;
     }
   </style>
 </head>
@@ -72,40 +109,27 @@
   <header>
     <h1>TitanPs GTPS</h1>
     <p class="description">
-      Welcome to <b>TitanPs</b>, an elegant and fun GTPS server to play!<br>
-      Enjoy the experience of playing Growtopia Private Server with exciting features and an active community.
+      TitanPs is a Growtopia Private Server made to give you a fun and stable experience.  
+      With unique features and an active community, TitanPs is perfect for all players!
     </p>
   </header>
 
-  <div class="card">
-    <h2>Server Status</h2>
-    <p class="status">🟢 Online</p>
-  </div>
+  <div class="section-title">Link VHOST</div>
+  <a class="btn" href="content://media/external/downloads/1000005560">⬇️ DOWNLOAD VHOST</a>
 
-  <div class="card">
-    <h2>Download Vhost</h2>
-    <p><a href="content://media/external/downloads/1000005560">Click here to download Vhost</a></p>
-  </div>
+  <div class="section-title">Link PTUNNEL (Android)</div>
+  <a class="btn" href="https://growsoft.cc/android.txt">📲 DOWNLOAD PTUNNEL ANDROID</a>
 
-  <div class="card">
-    <h2>Copy PTUNNEL (ANDROID)</h2>
-    <pre>https://growsoft.cc/android.txt</pre>
-  </div>
+  <div class="section-title">Link PTUNNEL (Windows)</div>
+  <a class="btn" href="https://growsoft.cc/windows.txt">💻 DOWNLOAD PTUNNEL WINDOWS</a>
 
-  <div class="card">
-    <h2>Copy PTUNNEL (WINDOWS)</h2>
-    <pre>https://growsoft.cc/windows.txt</pre>
-  </div>
-
-  <div class="card">
-    <h2>Add to Hosts</h2>
-    <pre>
+  <div class="section-title">Hosts Copy</div>
+  <pre>
 91.134.85.13 growtopia1.com
 91.134.85.13 growtopia2.com
 91.134.85.13 www.growtopia1.com
 91.134.85.13 www.growtopia2.com
-    </pre>
-  </div>
+  </pre>
 
   <footer>
     &copy; 2025 TitanPs GTPS. All rights reserved.
